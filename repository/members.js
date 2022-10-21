@@ -16,6 +16,11 @@ class MembersRepository {
     );
     return;
   };
+
+  deleteMember = async (userId, hashPassword) => {
+    await Members.destroy({ where: { userId, hashPassword } });
+    return;
+  };
 }
 
 module.exports = MembersRepository;
