@@ -1,11 +1,10 @@
 const { Members } = require("../models");
 
 class MembersRepository {
-  updateMember = async (userId, nickname, password) => {
+  updateMember = async (userId, password) => {
     await Members.update(
       {
         userId,
-        nickname,
         password,
       },
       {
