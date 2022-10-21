@@ -20,6 +20,12 @@ class MembersService {
     );
     return updateMember;
   };
+
+  deleteMember = async (userId, password) => {
+    const hashPassword = await pbkdf2(password, key, 121381, 121, "sha512");
+    await this.membersRepository.deleteMember(userId, hashPassword);
+    return;
+  };
 }
 
 module.exports = MembersService;
