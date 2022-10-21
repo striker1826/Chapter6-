@@ -1,6 +1,7 @@
 const PostsService = require("../service/posts");
-const postsService = new PostsService();
 
-class PostsController {}
+class PostsController {
+  postsService = new PostsService();
+}
 
 module.exports = PostsController;

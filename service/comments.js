@@ -1,6 +1,7 @@
 const CommentsRepository = require("../repository/comments");
-const commentsRepository = new CommentsRepository();
 
-class CommentsService {}
+class CommentsService {
+  membersRepository = new MembersRepository();
+}
 
 module.exports = CommentsService;

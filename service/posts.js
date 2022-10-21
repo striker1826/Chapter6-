@@ -1,6 +1,7 @@
 const PostsRepository = require("../repository/posts");
-const postsRepository = new PostsRepository();
 
-class PostsService {}
+class PostsService {
+  postsRepository = new PostsRepository();
+}
 
 module.exports = PostsService;

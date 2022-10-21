@@ -1,6 +1,7 @@
 const CommentsService = require("../service/comments");
-const commentsService = new CommentsService();
 
-class CommentsController {}
+class CommentsController {
+  commentsService = new CommentsService();
+}
 
 module.exports = CommentsController;
